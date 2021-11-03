@@ -1,18 +1,25 @@
-# migrate-roundcube for Plesk
+# Migrate Roundcube for Plesk
 
-Plesk migrator currently does not migrate address books of roundcube users. This script aims to solve this issue by 
+This script is provided as is and with-out warranty.  Use at your own caution and risk.   
+Backups data before going on.
+
+The current version of Plesk migrator does not migrate address books of roundcube webmail users. This script aims to solve this issue by 
 * adding missing contacts,  
 * add missing contactgroups, 
 * match contacts with groups 
 * and update the identities table (e.g. with the users' signatures).
 
+
 ## Usage   
-* After Plesk migration create a dumb of `roundcubemail` database from the original Plesk and save it as `roundcubemail.sql`.  
-* On the new Plesk: login with ssh and place the `migrate_roundcube.php` and  `roundcubemail.sql` in the same folder. 
-* Replace the `username` and `password` of the db user with your credentials. Around line 50-60 within `setCredentials()`.
-* Run script with `php migrate_roundcube.php`.
+* Create a dumb of `roundcubemail` database from the original server and save it as `roundcubemail.sql`.  
+* New Server: Login with ssh and place the `migrate_roundcube.php` and  `roundcubemail.sql` in a folder. 
+* Replace the `username` and `password` to access the database within the credentials settings in `migrate_roundcube.php`. (Around line 50-60 within `setCredentials()`).
+* Run script: `php migrate_roundcube.php`.
+
+Tested for roundcube-version: 2019092900 (03.Nov 2021). 
 
 ## FAQ
+
 ### Howto get the password for db user `admin`?
 https://support.plesk.com/hc/en-us/articles/213375129-How-to-connect-to-a-MySQL-server-on-a-Plesk-for-Linux-server-using-a-MySQL-admin-password-in-plain-text 
 Example:
