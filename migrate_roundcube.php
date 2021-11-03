@@ -51,8 +51,8 @@ class MigrateRoundcube {
     private function setCredentials()
     {
         $this->host = "localhost";
-        $this->db_user_name = "root";
-        $this->db_user_pass = "";
+        $this->db_user_name = "admin";
+        $this->db_user_pass = 'PASTE-YOUR-PASSWORD-HERE';
         $this->dbname = "roundcubemail";
         $this->dbname_source = "roundcubemail_import";
         $this->dump_file = "roundcubemail.sql";
