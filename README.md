@@ -1,7 +1,7 @@
 # Migrate Roundcube for Plesk
 
 This script is provided as is and with-out warranty.  Use at your own caution and risk.   
-Backups data before going on.
+BACKUP DATA BEFORE GOING ON!
 
 The current version of Plesk migrator does not migrate address books of roundcube webmail users. This script aims to solve this issue by 
 * adding missing contacts,  
