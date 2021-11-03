@@ -1,16 +1,16 @@
 # migrate-roundcube for Plesk
 
-Plesk migrator currently does not migrate address books of roundcube users.
-* This script aims to solve this issue by adding missing contacts.  
-* It will add missing contactgroups, 
+Plesk migrator currently does not migrate address books of roundcube users. This script aims to solve this issue by 
+* adding missing contacts,  
+* add missing contactgroups, 
 * match contacts with groups 
-* and update the identities table with the users' signatures.
+* and update the identities table (e.g. with the users' signatures).
 
 ## Usage   
 * After Plesk migration create a dumb of `roundcubemail` database from the original Plesk and save it as `roundcubemail.sql`.  
 * On the new Plesk: login with ssh and place the `migrate_roundcube.php` and  `roundcubemail.sql` in the same folder. 
-* replace the `username` and `password` of the db user with your credentials. Around line 50-60 within `setCredentials()`.
-* run script with `php migrate_roundcube.php`.
+* Replace the `username` and `password` of the db user with your credentials. Around line 50-60 within `setCredentials()`.
+* Run script with `php migrate_roundcube.php`.
 
 ## FAQ
 ### Howto get the password for db user `admin`?
@@ -37,3 +37,9 @@ add the terminal output inside `migrate_roundcube.php` (approx. line 50).
 (...)
 ```
 
+### Howto install `PHP CLI` and `mysqli`?
+For Ubuntu 20
+```
+# apt install php7.4-cli
+# apt-get install php-mysql
+```
