@@ -20,10 +20,10 @@ class MigrateRoundcube {
         $this->importIdentities();
 
         // DEV
-        echo "\n";
-        $this->dropContacts();
-        $this->dropContactgroups();
-        $this->dropContactgroupmembers();
+        // echo "\n";
+        // $this->dropContacts();
+        // $this->dropContactgroups();
+        // $this->dropContactgroupmembers();
 
         $this->dropDB($this->dbname_source);
 
