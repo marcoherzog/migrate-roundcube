@@ -19,7 +19,7 @@ class MigrateRoundcube {
         $this->mapContactsWithContactgroups();
         $this->importIdentities();
 
-        // DEV
+        // DEV - !!! Be CAREFUL with activating DROP methodson PRODUCTION as AUTO_INCREMENT will be set back and all records deleted. !!!
         // echo "\n";
         // $this->dropContacts();
         // $this->dropContactgroups();
