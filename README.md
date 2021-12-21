@@ -11,6 +11,7 @@ The current version of Plesk migrator does not migrate address books of roundcub
 
 
 ## Usage   
+(!!! Test if users have been created in users-table. Userwise import manually. @TODO)
 * Create a dumb of `roundcubemail` database from the original server and save it as `roundcubemail.sql`.  
 * New Server: Login with ssh and place the `migrate_roundcube.php` and  `roundcubemail.sql` in a folder. 
 * Replace the `username` and `password` to access the database within the credentials settings in `migrate_roundcube.php`. (Around line 50-60 within `setCredentials()`).
